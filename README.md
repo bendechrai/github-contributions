@@ -2,6 +2,8 @@
 
 Keep your GitHub contributions graph green with automated commits.
 
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/a848b360-9146-46e4-b480-d9a10a3e3abf" />
+
 ## What It Does
 
 This GitHub Action automatically commits to your repository **every 30 minutes**, creating **48 commits per day**. This is well above the 30 commits needed for the darkest green square on your GitHub contributions graph.
