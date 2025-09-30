@@ -32,5 +32,7 @@ jobs:
           git add .auto-commit/activity.log
           git commit -m "Auto-commit: $(date +'%Y-%m-%d %H:%M:%S')"
       
-      - name: Push commit
-        run: git push
+      - name: Pull and push changes
+        run: |
+          git pull --rebase
+          git push
