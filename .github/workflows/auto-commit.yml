@@ -28,7 +28,7 @@ jobs:
       - name: Make commit
         run: |
           mkdir -p .auto-commit
-          echo "$(date -Iseconds): $(uuidgen)" >> .auto-commit/activity.log
+          echo "$(date -Iseconds): $(uuidgen)" > .auto-commit/activity.log
           git add .auto-commit/activity.log
           git commit -m "Auto-commit: $(date +'%Y-%m-%d %H:%M:%S')"
       
