@@ -2,8 +2,8 @@ name: Auto Commits
 
 on:
   schedule:
-    # Runs every 30 minutes
-    - cron: '*/30 * * * *'
+    # Runs twice a day
+    - cron: '0 */12 * * *'
   workflow_dispatch: # Allows manual triggering
 
 permissions:
