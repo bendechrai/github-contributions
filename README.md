@@ -6,7 +6,7 @@ Keep your GitHub contributions graph green with automated commits.
 
 ## What It Does
 
-This GitHub Action automatically commits to your repository **every 30 minutes**, creating **48 commits per day**. This is well above the 30 commits needed for the darkest green square on your GitHub contributions graph.
+This GitHub Action automatically commits to your repository **twice a day**.
 
 ## Setup (2 minutes)
 
@@ -49,13 +49,13 @@ Scheduled workflows are disabled by default in forks. To activate it:
 3. Make any tiny change (add a space, change a comment, anything)
 4. Scroll down and click **Commit changes**
 
-That's it! The workflow will start running automatically every 30 minutes.
+That's it! The workflow will start running automatically twice a day.
 
 ### 6. Verify It's Working (Optional)
 
 - Go to the **Actions** tab in your fork
 - You'll see the "Auto Commits" workflow
-- Wait 30 minutes for the first automatic run, or click **Run workflow** to trigger it immediately
+- Wait for the first automatic run, or click **Run workflow** to trigger it immediately
 - After the first commit, check your contributions graph (may take up to 24 hours to update)
 
 ## How It Works
@@ -71,11 +71,10 @@ The action automatically:
 
 Want more or fewer commits per day? Edit the cron schedule in `.github/workflows/auto-commit.yml`:
 
-- `*/30 * * * *` = every 30 minutes (48 commits/day) **← default**
+- `*/30 * * * *` = every 30 minutes (48 commits/day)
 - `0 * * * *` = every hour (24 commits/day)
 - `0 */2 * * *` = every 2 hours (12 commits/day)
-
-**Note:** From what we can tell, 30+ commits per day gives you the darkest green square.
+- `0 */12 * * *` = every 12 hours (2 commits/day) **← default**
 
 ## FAQ
 
